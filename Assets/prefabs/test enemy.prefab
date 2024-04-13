@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4522754420688839138}
   - component: {fileID: 2683944195061244569}
   - component: {fileID: 4199724576347735268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: test enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,6 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxhealth: 50
   currenthealth: 0
+  rb: {fileID: 0}
 --- !u!114 &2683944195061244569
 MonoBehaviour:
   m_ObjectHideFlags: 0

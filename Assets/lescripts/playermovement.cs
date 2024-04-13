@@ -80,7 +80,12 @@ public class playermovement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        animator.SetFloat("xDir", 3); //animatsioonis
+        if (kasJooksisParemale)
+        {
+            animator.SetFloat("xDir", 3); //animatsioonis
+        }
+        else animator.SetFloat("xDir", 4); //animatsioonis
+
         Vector2 PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         rb.velocity = PlayerInput * dashingPower;
         yield return new WaitForSeconds(dashingTime);
