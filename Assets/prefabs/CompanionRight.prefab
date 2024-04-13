@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4704632612113038723}
   - component: {fileID: 1901808412947140541}
   m_Layer: 0
-  m_Name: CompanionMelee
+  m_Name: CompanionRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

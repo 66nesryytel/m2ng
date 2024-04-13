@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3520760579877588065}
   - component: {fileID: 706195748671244406}
   - component: {fileID: 7491442445507626477}
+  - component: {fileID: 4220048381840172330}
   m_Layer: 0
   m_Name: TackShooter
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,13 +47,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tackPrefab: {fileID: 7861213298431768880, guid: 476fc57fddcd75a43916956c96debcb9, type: 3}
-  firePoint: {fileID: 7642891377401730294, guid: ebd01451f2b78ef40b2994a4fdbc9b9f, type: 3}
+  firePoint: {fileID: 3520760579877588065}
   shootInterval: 1
   tackSpeed: 10
   targetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   detectionRange: 5
+  minDamage: 5
+  maxDamage: 20
 --- !u!212 &7491442445507626477
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -105,3 +108,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4220048381840172330
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4942556791579154613}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6170461353334032858}
   - component: {fileID: 4704632612113038723}
   m_Layer: 0
-  m_Name: CompanionRanged
+  m_Name: CompanionLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
