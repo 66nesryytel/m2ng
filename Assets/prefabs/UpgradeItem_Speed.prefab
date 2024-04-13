@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2177798379985024504}
   - component: {fileID: 5178928467206211387}
   - component: {fileID: 2509446287157623757}
-  - component: {fileID: 9048132506754247109}
+  - component: {fileID: 4575191814811367690}
   m_Layer: 0
   m_Name: UpgradeItem_Speed
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4489744180283484063}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.68, y: 0.81773627, z: 0.0071117696}
-  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7fd0ce55f72adc04d923bdcddf5b1e89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab5a8267ab5d1374fa9546134ea846c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,20 +118,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.038892984, y: -0.019446522}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 4, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 5}
+  m_Size: {x: 1.1218944, y: 1.4995999}
   m_EdgeRadius: 0
---- !u!114 &9048132506754247109
+--- !u!114 &4575191814811367690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,6 +140,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4489744180283484063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdfd01db388b56843aa1bf1afbd7efc0, type: 3}
+  m_Script: {fileID: 11500000, guid: bb94c821621328c439c0573f69618a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

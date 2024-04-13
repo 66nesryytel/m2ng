@@ -21,4 +21,10 @@ public class spell : MonoBehaviour
             spell.GetComponent<testprojectile>().damage = Random.Range(minDamage, maxDamage);
         }
     }
+
+    public void AddDamage(float a)
+    {
+        minDamage += a;
+        maxDamage += a;
+    }
 }

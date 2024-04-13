@@ -12,9 +12,22 @@ public class EnemyWaveManager : MonoBehaviour
     public float spawnInterval = 1f;
     public float spawnDistance = 10f;
 
+    public Transform parentTransform;
+
     public Camera mainCamera;
 
     public TackShooter tackshooter;
+    public Vector2 tackPosition = new Vector2(-3, 0);
+
+    public GameObject upgradeItem1;
+   // public Vector2 spawnPosition1 = new Vector2 (4, 0);
+    public GameObject upgradeItem2;
+   // public Vector2 spawnPosition2 = new Vector2(5, 0);
+    public GameObject upgradeItem3;
+    //public Vector2 spawnPosition3 = new Vector2(6, 0);
+
+    public bool enterpressed = true;
+
 
     private void Start()
     {
@@ -26,21 +39,29 @@ public class EnemyWaveManager : MonoBehaviour
     {
         while (true)
         {
-           // Instantiate(upgradeitem)
-            
-            yield return new WaitForSeconds(timeBetweenWaves);
 
-            // Increment the wave number
-            currentWave++;
-
-            if (currentWave % 3 == 0) //tackshooter spawner
+            if(Input.GetKeyDown(KeyCode.KeypadEnter))
             {
-            //    Instantiate(tackshooter, GetRandomSpawnPosition(), Quaternion.identity);
-            }
-      
+                Instantiate(upgradeItem1, parentTransform);
+                Instantiate(upgradeItem2, parentTransform);
+                Instantiate(upgradeItem3, parentTransform);
 
-            // Spawn enemies for the current wave
-            StartCoroutine(SpawnEnemies(currentWave));
+                //  Increment the wave number
+                currentWave++;
+
+                if (currentWave % 3 == 0 && currentWave != 0) //tackshooter spawner
+                {
+                    Instantiate(tackshooter, tackPosition, Quaternion.identity);
+                }
+
+
+                //  Spawn enemies for the current wave
+                StartCoroutine(SpawnEnemies(currentWave));
+
+                yield return new WaitForSeconds(10);
+            }
+            yield return null;
+
         }
     }
 
