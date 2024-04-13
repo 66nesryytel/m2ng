@@ -41,7 +41,7 @@ public class EnemyWaveManager : MonoBehaviour
             // Spawn enemies with some offset
             Vector3 spawnPosition = GetRandomSpawnPosition();
 
-            if (isOffScreen(spawnPosition))
+            if (isOffScreen(spawnPosition) && spawnPosition.x < 11f && spawnPosition.x > -8f && spawnPosition.y < 7.6f && spawnPosition.y > -6.4f)
             {
                 Instantiate(vaenlane, spawnPosition, Quaternion.identity);
             }

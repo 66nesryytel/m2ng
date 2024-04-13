@@ -36,11 +36,12 @@ public class playermovement : MonoBehaviour
 
         if(PlayerInput.x != 0 || PlayerInput.y != 0)
         {
-            SetMovementAnimator(PlayerInput);
+            animator.SetFloat("xDir", PlayerInput.x);
         }
         else
         {
-            animator.SetLayerWeight(1, 0);
+            animator.SetBool("standing", true);
+            animator.SetFloat("xDir", 0);
         }
         
 
@@ -64,19 +65,9 @@ public class playermovement : MonoBehaviour
         isDashing = true;
         Vector2 PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         rb.velocity = PlayerInput * dashingPower;
-       
-
         yield return new WaitForSeconds(dashingTime);
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
-    }
-
-    private void SetMovementAnimator(Vector2 direction)
-    {
-        animator.SetLayerWeight(1, 1);
-        animator.SetFloat("xDir", direction.x);
-        animator.SetFloat("yDir", direction.y);
-        //print(animator.GetFloat("xDir"));
     }
 }
