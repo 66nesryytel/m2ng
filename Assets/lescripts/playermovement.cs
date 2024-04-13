@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class playermovement : MonoBehaviour
@@ -14,10 +15,12 @@ public class playermovement : MonoBehaviour
     private float dashingTime = 0.1f;
     private float dashingCooldown = 1f;
 
-    // Start is called before the first frame update
-    void Start()
+    private Animator animator;
+
+    
+    private void Awake()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,9 +30,19 @@ public class playermovement : MonoBehaviour
         {
             return;
         }
-
+    
         Vector2 PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         rb.velocity = PlayerInput * moveSpeed;
+
+        if(PlayerInput.x != 0 || PlayerInput.y != 0)
+        {
+            SetMovementAnimator(PlayerInput);
+        }
+        else
+        {
+            animator.SetLayerWeight(1, 0);
+        }
+        
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
@@ -51,10 +64,19 @@ public class playermovement : MonoBehaviour
         isDashing = true;
         Vector2 PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         rb.velocity = PlayerInput * dashingPower;
+       
 
         yield return new WaitForSeconds(dashingTime);
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    private void SetMovementAnimator(Vector2 direction)
+    {
+        animator.SetLayerWeight(1, 1);
+        animator.SetFloat("xDir", direction.x);
+        animator.SetFloat("yDir", direction.y);
+        //print(animator.GetFloat("xDir"));
     }
 }
