@@ -4,10 +4,10 @@ See on Siiakalakeste github repo(-:
 Tiim Siiakalad osaleb nimelt 2024. aasta Tartu Ülikooli Game Jamil!! Loodetavasti tuleb hea mäng.
 
 ### Teema
-Me ei tea veel Game Jam teemat... )-:
+SUMMONING!!! Tõotab tulla huvitav laupäev!!
 
 ### Mäng
-Ei tea veel ka, miuke mäng meil valmis saab (või ei saa)...
+Oled tüdruk, kes puhtjuhuslikult õppis, kuidas deemoneid üles kutsuda! Kuid suur mure.. Nüüd kogu põrgurahvas tahab sind kinni püüda, et sinult summoning staff tagasi saada! Aeg end kaitsta..
 
 ### Kokkuvõtteks
 Jep!! Loodan, et mäng meeldib!
