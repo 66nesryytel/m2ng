@@ -13,8 +13,6 @@ public class playerstats : MonoBehaviour
     public float health;
     public float maxhealth;
 
-    public bool valibUpgrade;
-
     private void Awake()
     {
         if(playerStats != null)
