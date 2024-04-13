@@ -40,6 +40,7 @@ public class enemydamage : MonoBehaviour
         if(currenthealth <= 0)
         {
             Destroy(gameObject);
+
         }
     }
 }

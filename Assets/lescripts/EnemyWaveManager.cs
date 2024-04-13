@@ -14,6 +14,8 @@ public class EnemyWaveManager : MonoBehaviour
 
     public Camera mainCamera;
 
+    public TackShooter tackshooter;
+
     private void Start()
     {
         // Start spawning waves
@@ -24,10 +26,18 @@ public class EnemyWaveManager : MonoBehaviour
     {
         while (true)
         {
+           // Instantiate(upgradeitem)
+            
             yield return new WaitForSeconds(timeBetweenWaves);
 
             // Increment the wave number
             currentWave++;
+
+            if (currentWave % 3 == 0) //tackshooter spawner
+            {
+            //    Instantiate(tackshooter, GetRandomSpawnPosition(), Quaternion.identity);
+            }
+      
 
             // Spawn enemies for the current wave
             StartCoroutine(SpawnEnemies(currentWave));

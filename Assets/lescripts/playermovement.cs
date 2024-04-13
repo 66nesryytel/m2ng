@@ -24,6 +24,11 @@ public class playermovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    public void AddSpeed(float a)
+    {
+        moveSpeed += a;
+    }
+
     // Update is called once per frame
     void Update()
     {
