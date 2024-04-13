@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyWaveManager : MonoBehaviour
 {
     public GameObject vaenlane; // Reference to the enemy prefab to spawn
-    public float timeBetweenWaves = 5f; // Time between each wave
+    public float timeBetweenWaves = 10f; // Time between each wave
     public int enemiesPerWave = 10; // Number of enemies per wave
     public int currentWave = 0; // Current wave number
 
