@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerstats : MonoBehaviour
 {
     public static playerstats playerStats;
     
     public GameObject player;
+    public Slider healthSlider;
     
     public float health;
     public float maxhealth;
@@ -27,18 +29,21 @@ public class playerstats : MonoBehaviour
     void Start()
     {
         health = maxhealth;
+        healthSlider.value = CalculateHealthPercentage();
     }
 
     public void HealCharacter(float heal)
     {
         health += heal;
         CheckOverheal();
+        healthSlider.value = CalculateHealthPercentage();
     }
     
     public void TakeDamage(float damage)
     {
         health -= damage;
         CheckDeath();
+        healthSlider.value = CalculateHealthPercentage();
     }
 
     private void CheckOverheal()
@@ -55,5 +60,10 @@ public class playerstats : MonoBehaviour
         {
             Destroy(player);
         }
+    }
+
+    float CalculateHealthPercentage()
+    {
+        return health / maxhealth;
     }
 }
