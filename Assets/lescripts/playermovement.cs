@@ -14,6 +14,7 @@ public class playermovement : MonoBehaviour
     private float dashingPower = 14f;
     private float dashingTime = 0.1f;
     private float dashingCooldown = 0.5f;
+    public bool kasJooksisParemale;
 
     private Animator animator;
 
@@ -34,16 +35,36 @@ public class playermovement : MonoBehaviour
         Vector2 PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         rb.velocity = PlayerInput * moveSpeed;
 
-        if(PlayerInput.x != 0 || PlayerInput.y != 0)
+        if((PlayerInput.x != 0 || PlayerInput.y != 0) && isDashing == false) //kui mängija liigub
         {
-            animator.SetFloat("xDir", PlayerInput.x);
+            if(PlayerInput.x < 0) //vasakule
+            {
+                animator.SetFloat("xDir", -1f);
+                kasJooksisParemale = false;
+            }
+            else if (PlayerInput.x > 0) //paremale
+            {
+                animator.SetFloat("xDir", 1f);
+                kasJooksisParemale = true;
+            }
+            
+            else if (PlayerInput.x == 0)
+            {
+                if (kasJooksisParemale)
+                {
+                    animator.SetFloat("xDir", 1f);
+                }
+
+                else animator.SetFloat("xDir", -1f);
+            }
+            
         }
-        else
+        else if (isDashing)
         {
-            animator.SetBool("standing", true);
-            animator.SetFloat("xDir", 0);
+            animator.SetFloat("xDir", 2);
         }
-        
+        else { animator.SetFloat("xDir", 3); }
+
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {

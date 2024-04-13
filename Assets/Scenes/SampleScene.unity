@@ -362,8 +362,7 @@ MonoBehaviour:
   enemiesPerWave: 5
   currentWave: 0
   player: {fileID: 2453031209008790165, guid: 2ce5b3b85888a4f4e916aedfd8be6b88, type: 3}
-  kaugus_mangijast: 5
-  spawnInterval: 1.5
+  spawnInterval: 0.2
   spawnDistance: 5
   mainCamera: {fileID: 519420031}
 --- !u!1001 &385258084
@@ -380,11 +379,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7642891377401730294, guid: ebd01451f2b78ef40b2994a4fdbc9b9f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.74
+      value: 2.63
       objectReference: {fileID: 0}
     - target: {fileID: 7642891377401730294, guid: ebd01451f2b78ef40b2994a4fdbc9b9f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.22
+      value: -1.02
       objectReference: {fileID: 0}
     - target: {fileID: 7642891377401730294, guid: ebd01451f2b78ef40b2994a4fdbc9b9f, type: 3}
       propertyPath: m_LocalPosition.z
