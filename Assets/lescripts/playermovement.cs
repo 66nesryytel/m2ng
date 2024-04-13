@@ -16,6 +16,8 @@ public class playermovement : MonoBehaviour
     private float dashingCooldown = 0.5f;
     public bool kasJooksisParemale;
 
+    [SerializeField] private TrailRenderer tr;
+
     private Animator animator;
 
     
@@ -93,7 +95,9 @@ public class playermovement : MonoBehaviour
 
         Vector2 PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         rb.velocity = PlayerInput * dashingPower;
+        tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;

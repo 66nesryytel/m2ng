@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8a524a9942ae4489689a8aa751d5dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhealth: 300
+  maxhealth: 500
   currenthealth: 0
   rb: {fileID: 0}
 --- !u!114 &4197708794247398410
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3891f6e1b594e14db0b846036102e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 20
 --- !u!95 &6206267506954686743
 Animator:
   serializedVersion: 5

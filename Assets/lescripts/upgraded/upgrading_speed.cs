@@ -23,6 +23,7 @@ public class upgrading_speed : MonoBehaviour
         Transform parent = transform.parent;
         if (collision.name == "Player")
         {
+           
             playerReference.AddSpeed(10);
             for (int i = 0; i < parent.childCount; i++)
             {

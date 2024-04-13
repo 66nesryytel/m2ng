@@ -18,13 +18,17 @@ public class EnemyWaveManager : MonoBehaviour
 
     public TackShooter tackshooter;
     public Vector2 tackPosition = new Vector2(-3, 0);
+    public Vector2 tackPosition2 = new Vector2(0, 0);
+    public Vector2 tackPosition3 = new Vector2(3, 0);
+
+    public Vector2 suurPosition = new Vector2(2, 0);
+    public Vector2 suurPosition2 = new Vector2(-2, 0);
+
+    public GameObject suurVaenlane;
 
     public GameObject upgradeItem1;
-   // public Vector2 spawnPosition1 = new Vector2 (4, 0);
     public GameObject upgradeItem2;
-   // public Vector2 spawnPosition2 = new Vector2(5, 0);
     public GameObject upgradeItem3;
-    //public Vector2 spawnPosition3 = new Vector2(6, 0);
 
     public bool enterpressed = true;
 
@@ -49,9 +53,30 @@ public class EnemyWaveManager : MonoBehaviour
                 //  Increment the wave number
                 currentWave++;
 
-                if (currentWave % 3 == 0 && currentWave != 0) //tackshooter spawner
+                if (currentWave == 3 || currentWave == 9 || currentWave == 12) //tackshooter spawner
                 {
-                    Instantiate(tackshooter, tackPosition, Quaternion.identity);
+                    if (currentWave == 3)
+                    {
+                        Instantiate(tackshooter, tackPosition, Quaternion.identity);
+                    }
+                    else if (currentWave == 9)
+                    {
+                        Instantiate(tackshooter, tackPosition2, Quaternion.identity);
+                    }
+                    else if (currentWave == 12)
+                    {
+                        Instantiate(tackshooter, tackPosition3, Quaternion.identity);
+                    }
+                }
+
+                if (currentWave > 5)
+                {
+                    Instantiate(suurVaenlane);
+                }
+                else if (currentWave > 10)
+                {
+                    Instantiate (suurVaenlane, suurPosition, Quaternion.identity);
+                    Instantiate (suurVaenlane, suurPosition2, Quaternion.identity);
                 }
 
 
