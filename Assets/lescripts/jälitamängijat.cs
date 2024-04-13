@@ -7,7 +7,7 @@ public class jälitamängijat : MonoBehaviour
 {
     public Transform target;
     public float speed; //peab olema sama mis mängijal
-    public Vector3 offset = new Vector3(1,1,0);
+    public Vector3 offset;
     private Vector2 targetPosition;
 
     void Start()
