@@ -14,6 +14,13 @@ public class TackShooter : MonoBehaviour
 
     private float shootTimer = 0f;
 
+    [SerializeField] Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     private void Update()
     {
         // Update the shoot timer
@@ -35,6 +42,7 @@ public class TackShooter : MonoBehaviour
         // Instantiate and shoot tacks towards each target
         foreach (Collider2D target in targets)
         {
+            animator.SetFloat("isShooting", 1f);
             GameObject tack = Instantiate(tackPrefab, firePoint.position, Quaternion.identity);
             Vector2 direction = (target.transform.position - firePoint.position).normalized;
             tack.GetComponent<Rigidbody2D>().velocity = direction * tackSpeed;

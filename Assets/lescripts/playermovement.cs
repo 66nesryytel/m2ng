@@ -14,6 +14,8 @@ public class playermovement : MonoBehaviour
     private float dashingCooldown = 0.5f;
     public bool kasJooksisParemale;
 
+    public ParticleSystem dust;
+
     [SerializeField] private TrailRenderer tr;
 
     audio audioManager;
@@ -88,6 +90,7 @@ public class playermovement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
+        CreateDust();
         audioManager.PlaySFX(audioManager.sfx1);
         if (kasJooksisParemale)
         {
@@ -97,11 +100,16 @@ public class playermovement : MonoBehaviour
 
         Vector2 PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         rb.velocity = PlayerInput * dashingPower;
-        tr.emitting = true;
+       // tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
-        tr.emitting = false;
+        //tr.emitting = false;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
     }
 }
