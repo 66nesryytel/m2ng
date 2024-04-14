@@ -618,6 +618,7 @@ MonoBehaviour:
   healthSlider: {fileID: 2043276320}
   health: 0
   maxhealth: 100
+  otherScript: {fileID: 0}
 --- !u!4 &197567186
 Transform:
   m_ObjectHideFlags: 0
@@ -13029,12 +13030,32 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2025288701685289716, guid: 2ce5b3b85888a4f4e916aedfd8be6b88, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025288701685289716, guid: 2ce5b3b85888a4f4e916aedfd8be6b88, type: 3}
       propertyPath: m_PreviewTimeScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2453031209008790165, guid: 2ce5b3b85888a4f4e916aedfd8be6b88, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524937620894080701, guid: 2ce5b3b85888a4f4e916aedfd8be6b88, type: 3}
+      propertyPath: m_Size.x
+      value: 0.25844568
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524937620894080701, guid: 2ce5b3b85888a4f4e916aedfd8be6b88, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5673487
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524937620894080701, guid: 2ce5b3b85888a4f4e916aedfd8be6b88, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.029406786
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524937620894080701, guid: 2ce5b3b85888a4f4e916aedfd8be6b88, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.23706877
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

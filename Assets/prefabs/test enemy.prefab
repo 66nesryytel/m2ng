@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 4522754420688839138}
   - component: {fileID: 2683944195061244569}
   - component: {fileID: 4199724576347735268}
+  - component: {fileID: -7581635976384462629}
   m_Layer: 6
   m_Name: test enemy
   m_TagString: Untagged
@@ -276,6 +277,7 @@ MonoBehaviour:
   maxhealth: 50
   currenthealth: 0
   rb: {fileID: 0}
+  otherScript: {fileID: -7581635976384462629}
 --- !u!114 &2683944195061244569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,3 +312,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7581635976384462629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2995447120004344750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e6c13725417554d93f23f99bdff037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 7e76c5a173bb0f84da59f557aef08039, type: 2}
+  duration: 0.125

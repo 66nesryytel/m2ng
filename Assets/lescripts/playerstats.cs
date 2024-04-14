@@ -13,6 +13,8 @@ public class playerstats : MonoBehaviour
     public float health;
     public float maxhealth;
 
+    public SimpleFlash otherScript;
+
     private void Awake()
     {
         if(playerStats != null)
@@ -41,9 +43,13 @@ public class playerstats : MonoBehaviour
     
     public void TakeDamage(float damage)
     {
+        otherScript = player.GetComponent<SimpleFlash>();
+        otherScript.Flash();
+
         health -= damage;
         CheckDeath();
         healthSlider.value = CalculateHealthPercentage();
+
     }
 
     private void CheckOverheal()

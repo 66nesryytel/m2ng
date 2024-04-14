@@ -8,21 +8,24 @@ public class enemydamage : MonoBehaviour
     public float currenthealth;
 
     public Rigidbody2D rb;
-    
+
+    [SerializeField] public SimpleFlash otherScript;
+
     // Start is called before the first frame update
     void Start()
     {
         currenthealth = maxhealth;
+        otherScript = GetComponent<SimpleFlash>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     public void TakeDamage(float damage)
     {
+        if (otherScript != null)
+        {
+            otherScript.Flash();
+        }
         currenthealth -= damage;
         CheckDeath();
     }
