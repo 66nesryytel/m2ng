@@ -184,8 +184,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
-    m_PressedColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+    m_HighlightedColor: {r: 0.9339623, g: 0.7372078, b: 0.621173, a: 1}
+    m_PressedColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -403,7 +403,7 @@ MonoBehaviour:
   sfx3: {fileID: 0}
   sfx4: {fileID: 0}
   sfx5: {fileID: 0}
-  muusika: {fileID: 0}
+  muusika: {fileID: 8300000, guid: 653283941b6565d4498ce8b9ecea7c2f, type: 3}
 --- !u!1 &414643334
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,7 +928,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.9339623, g: 0.71503824, b: 0.58592916, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1059,9 +1059,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'You are a girl who found a really cool wizard staff but as it turns out,
     magic isn''t easy and summoning stuff is hard. Despite this, you have managed
-    to get four little guys to help you in defending against the horde of devils
-    and demons who really really want their staff back. Every once in a while, you
-    will summon little helpers who assist you in getting rid of the enemies!
+    to get two little guys to help you in defending against the horde of devils and
+    demons who really really want their staff back. Every once in a while, you will
+    summon little helpers who assist you in getting rid of the enemies!
 
 
     Press

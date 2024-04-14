@@ -43,8 +43,8 @@ public class upgrading_damage : MonoBehaviour
             audioManager.PlaySFX(audioManager.sfx2);
             playerReference.AddDamage(3);
             playerReference2.AddDamage(3);
-          //  playerReference3.AddDamage(3);
-          //  playerReference4.AddDamage(3);
+            //  playerReference3.AddDamage(3);
+            //  playerReference4.AddDamage(3);
 
 
             for (int i = 0; i < parent.childCount; i++)
@@ -53,4 +53,5 @@ public class upgrading_damage : MonoBehaviour
             }
         }
     }
+
 }

@@ -140,8 +140,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   detectionRange: 5
-  minDamage: 5
-  maxDamage: 20
+  minDamage: 10
+  maxDamage: 12
   animator: {fileID: -1126746449054570975}
 --- !u!212 &7491442445507626477
 SpriteRenderer:
