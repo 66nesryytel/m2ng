@@ -5,8 +5,15 @@ using UnityEngine;
 public class audiomenyy : MonoBehaviour
 {
     public AudioSource src;
+    public AudioSource backmusic;
     public AudioClip sfx1, sfx2, sfx3, sfx4, sfx5, muusika;
 
+
+    public void Start()
+    {
+        backmusic.clip = muusika;
+        backmusic.Play();
+    }
 
     public void Button1()
     {

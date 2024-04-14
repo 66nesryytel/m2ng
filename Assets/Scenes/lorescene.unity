@@ -397,6 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   src: {fileID: 787975545}
+  backmusic: {fileID: 787975545}
   sfx1: {fileID: 8300000, guid: be4713dbacd89f74b87e03a47d1fded4, type: 3}
   sfx2: {fileID: 8300000, guid: f399784c949ffbf45a6836f91fbd899c, type: 3}
   sfx3: {fileID: 0}
@@ -837,7 +838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -219}
+  m_AnchoredPosition: {x: 0, y: -199}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1030008469
@@ -858,7 +859,7 @@ MonoBehaviour:
     m_Top: 100
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 200
+  m_Spacing: 150
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -1033,7 +1034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.105, y: 183}
+  m_AnchoredPosition: {x: 1.105, y: 119}
   m_SizeDelta: {x: 1863.523, y: 781.242}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072733537
@@ -1101,8 +1102,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65.1
-  m_fontSizeBase: 65.1
+  m_fontSize: 61.52
+  m_fontSizeBase: 61.52
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

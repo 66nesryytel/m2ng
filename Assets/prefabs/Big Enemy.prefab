@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 8591109922289974098}
   - component: {fileID: 4197708794247398410}
   - component: {fileID: 6206267506954686743}
+  - component: {fileID: -6716357232069734024}
   m_Layer: 6
   m_Name: Big Enemy
   m_TagString: Untagged
@@ -276,6 +277,7 @@ MonoBehaviour:
   maxhealth: 500
   currenthealth: 0
   rb: {fileID: 0}
+  otherScript: {fileID: 0}
 --- !u!114 &4197708794247398410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,3 +312,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6716357232069734024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8409214079216834935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e6c13725417554d93f23f99bdff037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: bfc9c6d3448237b4cb9023b2fbbb57a8, type: 2}
+  duration: 0.2
