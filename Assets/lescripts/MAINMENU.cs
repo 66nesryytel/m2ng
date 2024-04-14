@@ -24,4 +24,14 @@ public class MAINMENU : MonoBehaviour
         Debug.Log("Lahkun...");
         Application.Quit();
     }
+
+    public void GoToLore()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

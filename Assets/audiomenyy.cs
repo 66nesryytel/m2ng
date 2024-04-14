@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class audio : MonoBehaviour
+public class audiomenyy : MonoBehaviour
 {
     public AudioSource src;
-    public AudioSource music;
     public AudioClip sfx1, sfx2, sfx3, sfx4, sfx5, muusika;
 
-    private void Start()
-    {
-        music.clip = muusika;
-        music.Play();
-    }
 
     public void Button1()
     {
@@ -42,8 +36,5 @@ public class audio : MonoBehaviour
         src.Play();
     }
 
-    public void PlaySFX(AudioClip clip)
-    {
-        src.PlayOneShot(clip);
-    }
+
 }

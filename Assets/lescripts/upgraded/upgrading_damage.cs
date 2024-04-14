@@ -11,6 +11,8 @@ public class upgrading_damage : MonoBehaviour
     private spell playerReference3;
     private spell playerReference4;
 
+    audio audioManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,16 +28,23 @@ public class upgrading_damage : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        audioManager = GameObject.Find("helivanem").GetComponent<audio>();
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         Transform parent = transform.parent;
         if (collision.name == "Player")
         {
-            playerReference.AddDamage(2);
-            playerReference2.AddDamage(2);
-            playerReference3.AddDamage(2);
-            playerReference4.AddDamage(2);
+            audioManager.PlaySFX(audioManager.sfx2);
+            playerReference.AddDamage(3);
+            playerReference2.AddDamage(3);
+            playerReference3.AddDamage(3);
+            playerReference4.AddDamage(3);
 
 
             for (int i = 0; i < parent.childCount; i++)

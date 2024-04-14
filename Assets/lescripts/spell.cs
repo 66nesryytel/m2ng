@@ -9,10 +9,14 @@ public class spell : MonoBehaviour
     public float maxDamage;
     public float projectileForce;
 
+
+
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(1))
         {
+
             GameObject spell = Instantiate(projectile, transform.position, Quaternion.identity);
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mypos = transform.position;

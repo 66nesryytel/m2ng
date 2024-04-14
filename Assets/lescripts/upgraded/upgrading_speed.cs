@@ -7,6 +7,7 @@ public class upgrading_speed : MonoBehaviour
 
 
     private playermovement playerReference;
+    audio audioManager;
 
 
     // Start is called before the first frame update
@@ -17,13 +18,18 @@ public class upgrading_speed : MonoBehaviour
       
     }
 
+    private void Awake()
+    {
+        audioManager = GameObject.Find("helivanem").GetComponent<audio>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         Transform parent = transform.parent;
         if (collision.name == "Player")
         {
-           
+            audioManager.PlaySFX(audioManager.sfx2);
             playerReference.AddSpeed(0.3f);
             for (int i = 0; i < parent.childCount; i++)
             {

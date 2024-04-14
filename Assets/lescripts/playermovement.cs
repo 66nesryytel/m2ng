@@ -16,12 +16,15 @@ public class playermovement : MonoBehaviour
 
     [SerializeField] private TrailRenderer tr;
 
+    audio audioManager;
+
     private Animator animator;
 
     
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        audioManager = GameObject.Find("helivanem").GetComponent<audio>();
     }
 
     public void AddSpeed(float a)
@@ -85,6 +88,7 @@ public class playermovement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
+        audioManager.PlaySFX(audioManager.sfx1);
         if (kasJooksisParemale)
         {
             animator.SetFloat("xDir", 3); //animatsioonis
