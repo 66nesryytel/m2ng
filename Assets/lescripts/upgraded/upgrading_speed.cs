@@ -24,7 +24,7 @@ public class upgrading_speed : MonoBehaviour
         if (collision.name == "Player")
         {
            
-            playerReference.AddSpeed(10);
+            playerReference.AddSpeed(0.3f);
             for (int i = 0; i < parent.childCount; i++)
             {
                 Destroy(parent.GetChild(i).gameObject);

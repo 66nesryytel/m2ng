@@ -9,7 +9,14 @@ public class MAINMENU : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(0);
+
+        StartCoroutine(start());
+    }
+
+    IEnumerator start()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(1);
     }
 
     public void ExitGame()
